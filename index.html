@@ -17,28 +17,20 @@
 <body>
 
     <!-- === الهيدر === -->
-     <header>
+    <header>
         <nav>
-            <!-- ✅ الجزء الأيمن: أيقونة القائمة + الشعار -->
-            <div class="nav-right">
-                <button class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <a href="#" class="logo" onclick="showPage('home'); return false;">
-                    <span data-i18n="logo">رحلتي للعمرة</span>
-                </a>
-            </div>
-            
-            <!-- روابط التنقل (تظهر على الشاشات الكبيرة) -->
+            <a href="#" class="logo" onclick="showPage('home'); return false;">
+                <span data-i18n="logo">رحلتي للعمرة</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#" class="nav-link" data-page="home" data-i18n="nav_home">الرئيسية</a></li>
-                <li><a href="#page-hotels" class="nav-link" data-page="hotels" data-i18n="nav_hotels">الفنادق</a></li>
-                <li><a href="#guide" class="scroll-link" data-i18n="nav_guide">دليل المعتمر</a></li>
-                <li><a href="#contact-section" class="scroll-link" data-i18n="nav_contact">اتصل بنا</a></li>
+                <li><a href="#" onclick="showPage('home'); return false;" data-i18n="nav_home">الرئيسية</a></li>
+                <li><a href="#page-hotels" onclick="showPage('hotels'); return false;" data-i18n="nav_hotels">الفنادق</a></li>
+                <li><a href="#guide" data-i18n="nav_guide">دليل المعتمر</a></li>
+                <li><a href="#contact-section" data-i18n="nav_contact">اتصل بنا</a></li>
             </ul>
-            
             <div class="nav-btns">
                 <i class="fas fa-moon theme-toggle" id="themeBtn"></i>
+                <a href="#" class="btn-gold" data-i18n="btn_book">حجز عمرة</a>
                 
                 <!-- اختيار اللغة -->
                 <select id="langSelect" onchange="changeLanguage(this.value)">
