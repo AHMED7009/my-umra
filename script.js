@@ -117,7 +117,6 @@ const translations = {
         guide_3_desc: "List of essential items you need for your journey"
     }
 };
-
 // ==========================================
 // بيانات 10 فنادق كاملة
 // ==========================================
@@ -369,21 +368,30 @@ window.addEventListener('popstate', function(e) {
 });
 
 // ==========================================
-// التمرير السلس
+// التمرير السلس (المعدل لحل مشكلة الفنادق)
 // ==========================================
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
         
+        // 1. إذا كان الرابط يخص صفحة الفنادق، لا تقم بالتمرير ودع دالة showPage تعمل
+        if (href === '#page-hotels' || this.getAttribute('data-page') === 'hotels') {
+            e.preventDefault();
+            showPage('hotels');
+            return;
+        }
+
+        // 2. إذا كان الرابط للرئيسية
         if (href === '#' || href === '#home') {
             e.preventDefault();
             showPage('home');
             return;
         }
         
+        // 3. روابط الأقسام الداخلية (مثل اتصل بنا ودليل المعتمر)
         if (href.includes('contact-section') || href.includes('guide') || href.includes('programs')) {
             e.preventDefault();
-            showPage('home');
+            showPage('home'); // نعود للرئيسية أولاً لأن هذه الأقسام موجودة فيها فقط
             setTimeout(function() {
                 const target = document.querySelector(href);
                 if (target) {
@@ -393,6 +401,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             return;
         }
         
+        // الروابط الأخرى
         const target = document.querySelector(href);
         if (target && !href.includes('page-')) {
             e.preventDefault();
