@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلتي للعمرة | My Umrah Journey</title>
+    
+    <!-- الخطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- ملف الـ CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- === الهيدر === -->
+    <header>
+        <nav>
+            <!-- ✅ الجزء الأيمن: أيقونة القائمة + الشعار -->
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="#" class="logo" onclick="showPage('home'); return false;">
+                    <span data-i18n="logo">رحلتي للعمرة</span>
+                </a>
+            </div>
+            
+            <!-- روابط التنقل (تظهر على الشاشات الكبيرة) -->
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link" data-page="home" data-i18n="nav_home">الرئيسية</a></li>
+                <li><a href="#page-hotels" class="nav-link" data-page="hotels" data-i18n="nav_hotels">الفنادق</a></li>
+                <li><a href="#guide" class="scroll-link" data-i18n="nav_guide">دليل المعتمر</a></li>
+                <li><a href="#contact-section" class="scroll-link" data-i18n="nav_contact">اتصل بنا</a></li>
+            </ul>
+            
+            <div class="nav-btns">
+                <i class="fas fa-moon theme-toggle" id="themeBtn"></i>
+                
+                <!-- اختيار اللغة -->
+                <select id="langSelect" onchange="changeLanguage(this.value)">
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="en">🇬🇧 English</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ✅ القائمة الجانبية (تظهر من اليمين) -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3 data-i18n="logo">رحلتي للعمرة</h3>
+            <button class="close-sidebar" id="closeSidebarBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="sidebar-menu">
+            <li>
+                <a href="#" class="sidebar-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span data-i18n="nav_home">الرئيسية</span>
+                </a>
+            </li>
+            <li>
+                <a href="#page-hotels" class="sidebar-link" data-page="hotels">
+                    <i class="fas fa-hotel"></i>
+                    <span data-i18n="nav_hotels">الفنادق</span>
+                </a>
+            </li>
+            <li>
+                <a href="#guide" class="sidebar-link scroll-link">
+                    <i class="fas fa-book"></i>
+                    <span data-i18n="nav_guide">دليل المعتمر</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact-section" class="sidebar-link scroll-link">
+                    <i class="fas fa-envelope"></i>
+                    <span data-i18n="nav_contact">اتصل بنا</span>
+                </a>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <p data-i18n="copyright">جميع الحقوق محفوظة © 2026 رحلتي للعمرة</p>
+        </div>
+    </aside>
+
+    <!-- ================= صفحة الرئيسية ================= -->
+    <main id="page-home" class="page active">
+        
+        <!-- قسم الهيرو -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 data-i18n="hero_title">رحلة إيمانية لا تُنسى</h1>
+                <p data-i18n="hero_desc">نعتني بكافة تفاصيل رحلتك لتركز فقط في عبادتك</p>
+                <br>
+                <a href="#programs" class="btn-gold btn-large scroll-link" data-i18n="btn_book_now">احجز عمرتك الآن</a>
+            </div>
+        </section>
+
+        <!-- قسم الباقات -->
+        <section id="programs" class="section-padding">
+            <div class="section-title">
+                <h2 data-i18n="packages_title">باقات العمرة المميزة</h2>
+                <p data-i18n="packages_desc">اختر الباقة التي تناسب احتياجاتك</p>
+            </div>
+            <div class="grid-container">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="VIP">
+                    <h3 class="card-title" data-i18n="pkg_vip_title">الباقة الملكية (VIP)</h3>
+                    <p data-i18n="pkg_vip_desc">إقامة في فندق مطل على الكعبة، مواصلات خاصة، وخدمة 24 ساعة.</p>
+                    <div class="price" data-i18n="pkg_vip_price">ابتداءً من 5000 ريال</div>
+                    <button class="btn-gold btn-full" data-i18n="btn_book">احجز الآن</button>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Standard">
+                    <h3 class="card-title" data-i18n="pkg_eco_title">الباقة الاقتصادية</h3>
+                    <p data-i18n="pkg_eco_desc">إقامة مريحة قريبة من الحرم مع توفير باصات ترددية على مدار الساعة.</p>
+                    <div class="price" data-i18n="pkg_eco_price">ابتداءً من 1500 ريال</div>
+                    <button class="btn-gold btn-full" data-i18n="btn_book">احجز الآن</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم دليل المعتمر -->
+        <section id="guide" class="section-padding" style="background: var(--bg-soft);">
+            <div class="section-title">
+                <h2 data-i18n="nav_guide">دليل المعتمر</h2>
+                <p>كل ما تحتاج معرفته قبل رحلتك</p>
+            </div>
+            <div class="grid-container">
+                <div class="card">
+                    <i class="fas fa-passport" style="font-size: 3rem; color: var(--accent); margin-bottom: 15px;"></i>
+                    <h3 class="card-title" data-i18n="guide_1_title">التأشيرة والإجراءات</h3>
+                    <p data-i18n="guide_1_desc">تعرف على متطلبات التأشيرة والأوراق اللازمة لأداء العمرة</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-kaaba" style="font-size: 3rem; color: var(--accent); margin-bottom: 15px;"></i>
+                    <h3 class="card-title" data-i18n="guide_2_title">مناسك العمرة</h3>
+                    <p data-i18n="guide_2_desc">دليل شامل لأداء مناسك العمرة خطوة بخطوة</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-suitcase" style="font-size: 3rem; color: var(--accent); margin-bottom: 15px;"></i>
+                    <h3 class="card-title" data-i18n="guide_3_title">ما يجب اصطحابه</h3>
+                    <p data-i18n="guide_3_desc">قائمة بالأغراض الأساسية التي تحتاجها في رحلتك</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم اتصل بنا -->
+        <section id="contact-section" class="section-padding">
+            <div class="section-title">
+                <h2 data-i18n="nav_contact">اتصل بنا</h2>
+                <p data-i18n="contact_desc">نحن هنا لمساعدتك في أي وقت</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item-large">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4 data-i18n="lbl_phones">أرقام التواصل</h4>
+                            <p>+966 500 000 000</p>
+                            <p>+966 12 555 5555</p>
+                        </div>
+                    </div>
+                    <div class="contact-item-large">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-i18n="lbl_emails">البريد الإلكتروني</h4>
+                            <p>info@rehlaty.com</p>
+                            <p>support@rehlaty.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item-large">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-i18n="lbl_location">الموقع</h4>
+                            <p data-i18n="contact_address">مكة المكرمة، المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                    <div class="contact-item-large">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+966 500 000 000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 data-i18n="form_title">أرسل لنا رسالة</h3>
+                    <form>
+                        <input type="text" data-i18n-placeholder="form_name" placeholder="الاسم الكامل">
+                        <input type="email" data-i18n-placeholder="form_email" placeholder="البريد الإلكتروني">
+                        <input type="tel" data-i18n-placeholder="form_phone" placeholder="رقم الهاتف">
+                        <textarea data-i18n-placeholder="form_message" placeholder="رسالتك" rows="5"></textarea>
+                        <button type="submit" class="btn-gold btn-full" data-i18n="form_send">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= صفحة الفنادق (10 فنادق) ================= -->
+    <main id="page-hotels" class="page">
+        
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1 data-i18n="hotels_hero_title">فنادقنا المميزة</h1>
+                <p data-i18n="hotels_hero_desc">اختر من أفضل الفنادق القريبة من الحرم المكي</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="section-title">
+                <h2 data-i18n="hotels_list_title">قائمة الفنادق</h2>
+                <p data-i18n="hotels_list_desc">نقدم لك أفضل الخيارات للإقامة المريحة</p>
+            </div>
+            <div class="hotels-grid" id="hotelsContainer">
+                <!-- سيتم ملء 10 فنادق بواسطة JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= صفحة تفاصيل الفندق ================= -->
+    <main id="page-hotel-details" class="page">
+        
+        <section class="section-padding" style="margin-top: 100px;">
+            <div class="hotel-details-container">
+                
+                <!-- 1. صورة الفندق واسمه في الأعلى -->
+                <div class="hotel-header">
+                    <div class="hotel-main-image">
+                        <img id="hotelMainImage" src="" alt="Hotel Name">
+                    </div>
+                    <div class="hotel-info-header">
+                        <h1 id="hotelName">Hotel Name</h1>
+                        <div class="hotel-rating-display" id="hotelRatingDisplay"></div>
+                        <p class="hotel-location" id="hotelLocation">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span></span>
+                        </p>
+                        <button class="btn-gold btn-large" onclick="showPage('hotels'); return false;">
+                            <i class="fas fa-arrow-right" id="backIcon"></i>
+                            <span data-i18n="btn_back_hotels">العودة للفنادق</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2 & 3 & 4. الموقع وأرقام التواصل والإيميلات -->
+                <div class="hotel-section">
+                    <h2><i class="fas fa-address-card"></i> <span data-i18n="sec_contact">معلومات الاتصال</span></h2>
+                    <div class="contact-info-grid">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-i18n="lbl_phones">أرقام التواصل</h4>
+                                <p id="hotelPhones"></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-i18n="lbl_emails">البريد الإلكتروني</h4>
+                                <p id="hotelEmails"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. صور الفندق -->
+                <div class="hotel-section">
+                    <h2><i class="fas fa-images"></i> <span data-i18n="sec_gallery">معرض الصور</span></h2>
+                    <div class="gallery-grid" id="hotelGallery"></div>
+                </div>
+
+                <!-- 6. خدمات الفندق -->
+                <div class="hotel-section">
+                    <h2><i class="fas fa-concierge-bell"></i> <span data-i18n="sec_services">الخدمات المتاحة</span></h2>
+                    <div class="services-grid" id="hotelServices"></div>
+                </div>
+
+                <!-- 7. تقييم الفندق -->
+                <div class="hotel-section">
+                    <h2><i class="fas fa-star"></i> <span data-i18n="sec_reviews">تقييمات النزلاء</span></h2>
+                    <div class="rating-summary" id="ratingSummary"></div>
+                    <div class="reviews-container" id="hotelReviews"></div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- === الفوتر === -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div>
+                <h3 class="logo logo-white" data-i18n="logo">رحلتي للعمرة</h3>
+                <p data-i18n="footer_desc">منصتكم الموثوقة لتنظيم رحلات العمرة والزيارة بأعلى معايير الجودة.</p>
+            </div>
+            <div>
+                <h4 data-i18n="footer_links">روابط سريعة</h4>
+                <p data-i18n="link_faq">الأسئلة الشائعة</p>
+                <p data-i18n="link_privacy">سياسة الخصوصية</p>
+                <p data-i18n="link_terms">الشروط والأحكام</p>
+            </div>
+            <div>
+                <h4 data-i18n="footer_contact">تواصل معنا</h4>
+                <p><i class="fab fa-whatsapp"></i> +966 500 000 000</p>
+                <p><i class="fas fa-envelope"></i> info@rehlaty.com</p>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <p class="copyright" data-i18n="copyright">جميع الحقوق محفوظة © 2026 رحلتي للعمرة</p>
+    </footer>
+
+    <!-- ملف الـ JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
