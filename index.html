@@ -31,8 +31,9 @@
             
             <!-- روابط التنقل (تظهر على الشاشات الكبيرة) -->
             <ul class="nav-links">
-                <li><a href="#" class="nav-link" data-page="home" data-i18n="nav_home">الرئيسية</a></li>
-                <li><a href="#page-hotels" class="scroll-link" data-page="hotels"><span data-i18n="nav_hotels">الفنادق</span></a></li>   
+                <li><a href="#" class="nav-link" data-page="home" onclick="showPage('home'); return false;" data-i18n="nav_home">الرئيسية</a></li>
+                <li><a href="#" class="nav-link" data-page="hotels" onclick="showPage('hotels'); return false;"><span data-i18n="nav_hotels">الفنادق</span></a></li>   
+                <li><a href="#page-athkar" class="nav-link" data-page="athkar" onclick="showPage('athkar'); return false;"><span data-i18n="nav_athkar">الأذكار</span></a></li>
                 <li><a href="#guide" class="scroll-link" data-i18n="nav_guide">دليل المعتمر</a></li>
                 <li><a href="#contact-section" class="scroll-link" data-i18n="nav_contact">اتصل بنا</a></li>
             </ul>
@@ -69,6 +70,12 @@
                 <a href="#page-hotels" class="sidebar-link" data-page="hotels">
                     <i class="fas fa-hotel"></i>
                     <span data-i18n="nav_hotels">الفنادق</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="sidebar-link" data-page="athkar">
+                    <i class="fas fa-praying-hands"></i>
+                    <span data-i18n="nav_athkar">الأذكار والأسماء</span>
                 </a>
             </li>
             <li>
@@ -294,8 +301,41 @@
 
             </div>
         </section>
+        
 
     </main>
+    <main id="page-athkar" class="page">
+    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800'); background-size: cover;">
+        <div class="hero-content">
+            <h1 data-i18n="athkar_title">أذكار وأدعية المعتمر</h1>
+            <p data-i18n="athkar_subtitle">حصن نفسك ودع ربي يتقبل طاعتك</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="grid-container">
+            <div class="card athkar-card">
+                <h3 class="card-title"><i class="fas fa-heart"></i> نية العمرة والإحرام</h3>
+                <p class="athkar-text">"لَبَّيْكَ عُمْرَةً، لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لا شَرِيكَ لَكَ"</p>
+            </div>
+
+            <div class="card athkar-card">
+                <h3 class="card-title"><i class="fas fa-sync"></i> أذكار الطواف</h3>
+                <p class="athkar-text">يُسن التكبير عند الحجر الأسود: "الله أكبر". <br><br> وبين الركن اليماني والحجر الأسود: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ"</p>
+            </div>
+
+            <div class="card athkar-card">
+                <h3 class="card-title"><i class="fas fa-walking"></i> أذكار السعي</h3>
+                <p class="athkar-text">عند الصفا والمروة: "إِنَّ الصَّفَا وَالْمَرْوَةَ مِن شَعَائِرِ اللَّهِ... أَبْدَأُ بِمَا بَدَأَ اللَّهُ بِهِ". <br><br> ثم الدعاء: "لا إِلهَ إِلَّا اللهُ وَحْدَهُ لا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"</p>
+            </div>
+
+            <div class="card athkar-card">
+                <h3 class="card-title"><i class="fas fa-kaaba"></i> عند رؤية الكعبة</h3>
+                <p class="athkar-text">"اللَّهُمَّ زِدْ هَذَا البَيْتَ تَشْرِيفاً وَتَعْظِيماً وَتَكْرِيماً وَمَهَابَةً، وَزِدْ مَنْ شَرَّفَهُ وَكَرَّمَهُ مِمَّنْ حَجَّهُ أَوِ اعْتَمَرَهُ تَشْرِيفاً وَتَكْرِيماً وَتَعْظِيماً وَبِرّاً"</p>
+            </div>
+        </div>
+    </section>
+</main>
 
     <!-- === الفوتر === -->
     <footer id="contact">
