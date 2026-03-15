@@ -17,7 +17,7 @@
 <body>
 
     <!-- === الهيدر === -->
-    <header>
+     <header>
         <nav>
             <!-- ✅ الجزء الأيمن: أيقونة القائمة + الشعار -->
             <div class="nav-right">
@@ -49,46 +49,6 @@
         </nav>
     </header>
 
-    <!-- ✅ القائمة الجانبية (تظهر من اليمين) -->
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-    <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <h3 data-i18n="logo">رحلتي للعمرة</h3>
-            <button class="close-sidebar" id="closeSidebarBtn">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="sidebar-menu">
-            <li>
-                <a href="#" class="sidebar-link" data-page="home">
-                    <i class="fas fa-home"></i>
-                    <span data-i18n="nav_home">الرئيسية</span>
-                </a>
-            </li>
-            <li>
-                <a href="#page-hotels" class="sidebar-link" data-page="hotels">
-                    <i class="fas fa-hotel"></i>
-                    <span data-i18n="nav_hotels">الفنادق</span>
-                </a>
-            </li>
-            <li>
-                <a href="#guide" class="sidebar-link scroll-link">
-                    <i class="fas fa-book"></i>
-                    <span data-i18n="nav_guide">دليل المعتمر</span>
-                </a>
-            </li>
-            <li>
-                <a href="#contact-section" class="sidebar-link scroll-link">
-                    <i class="fas fa-envelope"></i>
-                    <span data-i18n="nav_contact">اتصل بنا</span>
-                </a>
-            </li>
-        </ul>
-        <div class="sidebar-footer">
-            <p data-i18n="copyright">جميع الحقوق محفوظة © 2026 رحلتي للعمرة</p>
-        </div>
-    </aside>
-
     <!-- ================= صفحة الرئيسية ================= -->
     <main id="page-home" class="page active">
         
@@ -98,7 +58,7 @@
                 <h1 data-i18n="hero_title">رحلة إيمانية لا تُنسى</h1>
                 <p data-i18n="hero_desc">نعتني بكافة تفاصيل رحلتك لتركز فقط في عبادتك</p>
                 <br>
-                <a href="#programs" class="btn-gold btn-large scroll-link" data-i18n="btn_book_now">احجز عمرتك الآن</a>
+                <a href="#programs" class="btn-gold btn-large" data-i18n="btn_book_now">احجز عمرتك الآن</a>
             </div>
         </section>
 
@@ -110,14 +70,14 @@
             </div>
             <div class="grid-container">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="VIP">
+                    <img src="https://images.unsplash.com/photo-1565019055582-6520f3329130?auto=format&fit=crop&q=80&w=800" alt="VIP">
                     <h3 class="card-title" data-i18n="pkg_vip_title">الباقة الملكية (VIP)</h3>
                     <p data-i18n="pkg_vip_desc">إقامة في فندق مطل على الكعبة، مواصلات خاصة، وخدمة 24 ساعة.</p>
                     <div class="price" data-i18n="pkg_vip_price">ابتداءً من 5000 ريال</div>
                     <button class="btn-gold btn-full" data-i18n="btn_book">احجز الآن</button>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Standard">
+                    <img src="https://images.unsplash.com/photo-1548543604-a87a990d1d7c?auto=format&fit=crop&q=80&w=800" alt="Standard">
                     <h3 class="card-title" data-i18n="pkg_eco_title">الباقة الاقتصادية</h3>
                     <p data-i18n="pkg_eco_desc">إقامة مريحة قريبة من الحرم مع توفير باصات ترددية على مدار الساعة.</p>
                     <div class="price" data-i18n="pkg_eco_price">ابتداءً من 1500 ريال</div>
