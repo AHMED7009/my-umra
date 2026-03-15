@@ -7,6 +7,9 @@
 // ==========================================
 const translations = {
     ar: {
+        nav_athkar: "الأذكار",
+        athkar_title: "أذكار وأدعية المعتمر",
+        athkar_subtitle: "رفيقك الروحي في رحلة الإيمان",
         logo: "رحلتي للعمرة",
         nav_home: "الرئيسية",
         nav_hotels: "الفنادق",
@@ -62,6 +65,9 @@ const translations = {
         guide_3_desc: "قائمة بالأغراض الأساسية التي تحتاجها في رحلتك"
     },
     en: {
+        nav_athkar: "Athkar",
+        athkar_title: "Pilgrim's Supplications",
+        athkar_subtitle: "Your spiritual companion in the journey of faith",
         logo: "My Umrah Journey",
         nav_home: "Home",
         nav_hotels: "Hotels",
