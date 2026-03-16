@@ -130,7 +130,7 @@ const hotelsData = [
     {
         id: 1,
         name: { ar: "فندق برج الساعة فيرمونت", en: "Fairmont Clock Tower" },
-        image: "hOu/فندق.webp",
+        image: "hou/فندق.webp",
         description: { ar: "فندق 5 نجوم مقابل المسجد الحرام مباشرة", en: "5-star hotel directly opposite the Holy Mosque" },
         location: { ar: "أبراج البيت، مكة - 100م من الحرم", en: "Abraj Al-Bait, Makkah - 100m from Haram" },
         phones: ["+966 12 567 8888", "+966 50 123 4567"],
