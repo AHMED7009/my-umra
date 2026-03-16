@@ -135,12 +135,7 @@ const hotelsData = [
         location: { ar: "أبراج البيت، مكة - 100م من الحرم", en: "Abraj Al-Bait, Makkah - 100m from Haram" },
         phones: ["+966 12 567 8888", "+966 50 123 4567"],
         emails: ["info@fairmont-makkah.com"],
-        gallery: [
-            "hOu/فندق.webp",
-            "hOu/غرفه.webp",
-            "hOu/غرفه3.webp",
-            "hOu/غرفه2.webp"
-        ],
+        gallery: ["hou/فندق.webp","hou/غرفه.webp","hou/غرفه3.webp","hou/غرفه2.webp"],
         services: { ar: ["واي فاي", "مطاعم", "سبا", "مواقف", "خدمة غرف 24س"], en: ["WiFi", "Restaurants", "Spa", "Parking", "24h Room Service"] },
         rating: 4.8,
         totalReviews: 2547,
